@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+
+<title>Horario 2º DAW</title>
+<head>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightgray;
+            color: black;
+        }
+
+        td.servidor {
+            background-color: lightgreen;
+            color: black;
+        }
+
+        td.despliegue {
+            background-color: #ebbad8;
+            color: black;
+        }
+
+        td.cliente{
+            background-color: lightblue;
+        }
+
+        td.diseño{
+            background-color: lightsalmon;
+        }
+
+        td.recreo {
+            background-color: lightgray;
+            color: black;
+        }
+
+        td.empresa {
+            background-color: lightyellow;
+            color: black;
+        }
+
+        td.horas{
+            background-color: lightgray;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+        <tr>
+            <td class="horas">8:45 - 9:35</td>
+            <td class="cliente" rowspan="2">CONTORNO CLIENTE</td>
+            <td class="servidor" rowspan="2">CONTORNO SERVIDOR</td>
+            <td class="servidor" rowspan="2">CONTORNO SERVIDOR</td>
+            <td class="servidor">CONTORNO SERVIDOR</td>
+            <td class="diseño" rowspan="2">DISEÑO INTERFAZ</td>
+        </tr>
+
+        <tr>
+            <td class="horas">9:35- 10:25</td>
+            <td class="cliente">CONTORNO CLIENTE</td>
+        </tr>
+
+        <tr>
+            <td class="horas">10:25 - 10:45</td>
+            <td colspan="5" class="recreo">RECREO</td>
+        </tr>
+
+        <tr>
+            <td class="horas">10:45 - 11:35</td>
+            <td class="diseño" rowspan="2">DISEÑO INTERFAZ</td>
+            <td class="despliegue" rowspan="2">DESPLIEGUE APP</td>
+            <td class="empresa" rowspan="2">EMPRESAS</td>
+            <td class="cliente">CONTORNO CLIENTE</td>
+            <td class="diseño">DISEÑO INTERFAZ</td>
+        </tr>
+
+        <tr>
+            <td class="horas">11:35 - 12:25</td>
+            <td class="despliegue">DESPLIEGUE APP</td>
+            <td class="servidor">CONTORNO SERVIDOR</td>
+        </tr>
+
+        <tr>
+            <td class="horas">12:25 - 12:45</td>
+            <td colspan="5" class="recreo">RECREO</td>
+        </tr>
+
+        <tr>
+            <td class="horas">12:45 - 13:35</td>
+            <td class="diseño" rowspan="2">DISEÑO INTERFAZ</td>
+            <td class="cliente" rowspan="2">CONTORNO CLIENTE</td>
+            <td class="despliegue" rowspan="2">DESPLIEGUE APP</td>
+            <td class="cliente"rowspan="2">CONTORNO CLIENTE</td>
+            <td class="servidor" rowspan="2">CONTORNO SERVIDOR</td>
+        </tr>
+
+        <tr>
+            <td class="horas">13:35 - 14:25</td>
+        </tr>
+
+        <tr>
+            <td class="horas"></td>
+            <td class="recreo" colspan="5">MEDIODÍA</td>
+        </tr>
+
+        <tr>
+            <td class="horas">15:40 - 16:30</td>
+            <td class="empresa">EMPRESAS</td>
+            <td rowspan="3"></td>
+            <td class="cliente">CONTORNO CLIENTE</td>
+            <td rowspan="3"></td>
+            <td rowspan="3"></td>
+        </tr>
+
+        <tr>
+            <td class="horas">16:30 - 17:20</td>
+            <td class="servidor" rowspan="2">CONTORNO SERVIDOR</td>
+            <td class="diseño" rowspan="2">DISEÑO INTERFAZ</td>
+        </tr>
+
+        <tr>
+            <td class="horas">17:20 - 18:10</td>
+        </tr>
+    </table>
+</body>
+
+</html>
