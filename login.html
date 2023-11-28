@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <video src="archivos/looppapel.mp4" autoplay loop muted></video>
+
+    <header>
+        <nav>
+            <a href="horario.html">Horario</a>
+            <a href="login.html">Login</a>
+            <a href="noticias.html">Noticias</a>
+        </nav>
+    </header>
+
+    <form>
+        <p class="tituloform"><b>FORMULARIO DE REGISTRO</b></p>
+
+        <label for='nombre'><b>Nombre e apellidos:</b></label>
+        <input type='text' id='nombre' placeholder='Introduce teu nome e apellidos' name='nombre'>
+
+        <label for='correo'><b>Correo electrónico:</b></label>
+        <input type='text' id='correo' placeholder='Introduce teu correo electrónico' name='correo'>
+
+        <label for='password'><b>Contraseña</b></label>
+        <input type='password' id='password' placeholder='Introduce tu contraseña' name='password'>
+
+        <div class="formgenero">
+            <p><b>Selecciona tu genero</b></p>
+            <p>Masculino
+                <label>
+                    <input type="radio" name="genero" value="Masculino">
+                </label>
+            </p>
+
+            <p>Femenino
+                <label>
+                    <input type="radio" name="genero" value="Femenino">
+                </label>
+            </p>
+
+            <p>Otro
+                <label>
+                    <input type="radio" name="genero" value="Otro">
+                </label>
+            </p>
+        </div>
+
+        <label for="asignatura"><b>Asignatura</b></label>
+        <select name="asignatura" id="asignatura">
+            <option value="Diseño de aplicaciones web">Diseño de aplicaciones web</option>
+            <option value="Desarrollo web en contorno servidor">Desarrollo web en contorno servidor</option>
+            <option value="Desarrollo web en contorno cliente">Diseño de aplicaciones web</option>
+            <option value="Empresas a iniciativa emprendedora">Empresas a iniciativa emprendedora</option>
+            <option value="Despliegue de aplicaciones web">Despliegue de aplicaciones web</option>
+        </select>
+
+        <audio controls>
+            <source src="archivos/loop.mp3" width="100">
+        </audio>
+        <br>
+
+        <br>
+        <button type='submit'>Crear cuenta</button>
+    </form>
+
+    <footer>
+        <p><b>&copy;2023 Samuel Fuentes. Todos los derechos reservados. </b></p>
+    </footer>
+
+</body>
+
+</html>
