@@ -7,12 +7,10 @@ body {
     align-items: center;
     justify-content: center;
     color: black;
-    overflow: hidden;
 }
 
 /* Video de fondo */
 video {
-    position: fixed;
     top: 0;
     left: 0;
     min-width: 100%;
@@ -130,14 +128,13 @@ form button:hover {
 
 /* Footer */
 footer {
-    position: absolute;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-    bottom: 0px;
     background-color: lightblue;
     text-align: center;
-    margin-top: auto;
+    position: fixed;
+    bottom: 0;
 }
 
 /* Tabla */
@@ -189,3 +186,4 @@ td.horas {
     background-color: lightgray;
     color: black;
 }
+
