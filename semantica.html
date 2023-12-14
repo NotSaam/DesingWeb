@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creación estructura web</title>
+    <style>
+      body {
+        border: 1px solid black;
+        width: 50%;
+        min-height: 100vh;
+        background-color: gray;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      header,
+      nav,
+      section,
+      article,
+      aside,
+      footer {
+        border: 1px solid black;
+        margin: 20px;
+        background-color: lightgray;
+      }
+
+      header {
+        background-color: rgb(170, 170, 170);
+      }
+
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      aside,
+      article {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+
+      footer {
+        clear: both;
+      }
+
+      article header {
+        background-color: rgb(170, 170, 170);
+      }
+
+      article p {
+        margin: 20px;
+        background-color: rgb(170, 170, 170);
+      }
+
+      article footer {
+        margin: 20px 0;
+      }
+
+      aside {
+        height: 366px;
+      }
+
+      @media (min-width: 768px) {
+        aside,
+        article {
+          width: 48%;
+          display: inline-block;
+          vertical-align: top;
+        }
+
+        article:last-of-type {
+          width: 100%;
+        }
+
+        article:last-of-type p,
+        aside {
+          width: 100%;
+        }
+
+        article:last-of-type aside {
+          margin-top: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>Header</p>
+    </header>
+    <nav>
+      <p>Nav</p>
+    </nav>
+    <section>
+      <aside>
+        <p>Section 1</p>
+        <header>
+          <p>Header</p>
+        </header>
+        <nav>
+          <p>Nav</p>
+        </nav>
+        <footer>Footer</footer>
+      </aside>
+      <article>
+        <p>Section 2</p>
+        <header>
+          <p>Header</p>
+        </header>
+        <article>
+          <header>
+            <p>Header</p>
+          </header>
+          <p>Content</p>
+          <p>Content</p>
+          <footer>Footer</footer>
+        </article>
+        <article>
+          <header>
+            <p>Header</p>
+          </header>
+          <p>Content</p>
+          <aside>Aside</aside>
+          <footer>Footer</footer>
+        </article>
+        <footer>Footer</footer>
+      </article>
+    </section>
+    <footer>Footer</footer>
+  </body>
+</html>
