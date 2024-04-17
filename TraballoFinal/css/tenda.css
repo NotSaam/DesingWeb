@@ -1,0 +1,23 @@
+/* Estilos para el contenedor de productos */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Estilos para cada producto */
+  .product-item {
+    flex: 0 0 calc(33.33% - 20px); /* Para que haya 3 columnas con espacio entre ellas */
+    max-width: calc(33.33% - 20px);
+    text-align: center;
+  }
+
+  .product-item img {
+    max-width: 100%;
+    max-height: 400px; /* Altura mayor para las imágenes verticales */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
