@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Exercicio 2" />
+    <meta name="keywords" content="Formulario, HTML" />
+    <meta name="author" content="Ángel Martínez Lago" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Formulario de Rexistro</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      form {
+        width: 50%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2>Formulario de Rexistro</h2>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center">
+      <form>
+        <div>
+          <label for="nome">Nome e apelidos:</label>
+          <input
+            type="text"
+            id="nome"
+            pattern="[a-zA-ZÑÁÉÍÓÚÜ]|-"
+            placeholder="Introduce nome e apelidos"
+          />
+        </div>
+        <div>
+          <label for="email">Enderezo electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            pattern="^[a-z0-9._]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$"
+            placeholder="Introduce o teu e-mail"
+          />
+        </div>
+        <div>
+          <label for="contrasinal">Contrasinal:</label>
+          <input
+            type="password"
+            id="contrasinal"
+            minlength="6"
+            placeholder="Contrasinal"
+          />
+        </div>
+        <div>
+          <label>Escolle o teu xénero:</label>
+          <input type="radio" name="xenero" value="masculino" />
+          <label for="masculino">Masculino</label>
+          <input type="radio" name="xenero" value="femenino" />
+          <label for="femenino">Femenino</label>
+        </div>
+        <div>
+          <label> Escolle a asignatura:</label>
+          <select name="asignatura">
+            <option value="" disabled selected>
+              Selecciona una asignatura
+            </option>
+            <option value="DIW">Deseño Interfaces Web</option>
+            <option value="DEAW">Despregamento Aplicacións WEB</option>
+            <option value="DEW">
+              Desenvolvemento Web en Contorno Servidor
+            </option>
+            <option value="DWCC">
+              Desenvolvemento Web en Contorno Cliente
+            </option>
+            <option value="DWCC">Empresas e Iniciativa emprendedora</option>
+          </select>
+        </div>
+        <div>
+          <input type="submit" value="Rexistrar" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Street View 360º</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      #streetView {
+        max-width: 100%;
+        max-height: 100%;
+        border: 5px solid #ccc; /* Borde para la imagen */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+        cursor: grab; /* Cambiar el cursor al modo "agarrar" */
+      }
+    </style>
+  </head>
+  <body>
+    <img id="streetView" src="pedravixia.jpg" alt="Google Street View 360º" />
+
+    <script>
+      // Función para habilitar el arrastrar y soltar de la imagen
+      function dragImage(event) {
+        event.preventDefault();
+        // Posición inicial del ratón
+        let initialX = event.clientX;
+        let initialY = event.clientY;
+        // Posición inicial de la imagen
+        let initialImageX = event.target.offsetLeft;
+        let initialImageY = event.target.offsetTop;
+
+        // Función para mover la imagen
+        function moveImage(event) {
+          // Calcular la nueva posición de la imagen
+          let newX = initialImageX + event.clientX - initialX;
+          let newY = initialImageY + event.clientY - initialY;
+          // Establecer la nueva posición de la imagen
+          event.target.style.left = newX + "px";
+          event.target.style.top = newY + "px";
+        }
+
+        // Función para soltar la imagen
+        function dropImage(event) {
+          // Eliminar los event listeners para mover y soltar la imagen
+          document.removeEventListener("mousemove", moveImage);
+          document.removeEventListener("mouseup", dropImage);
+          // Cambiar el cursor al modo "agarrar"
+          event.target.style.cursor = "grab";
+        }
+
+        // Agregar event listeners para mover y soltar la imagen
+        document.addEventListener("mousemove", moveImage);
+        document.addEventListener("mouseup", dropImage);
+        // Cambiar el cursor al modo "agarrando"
+        event.target.style.cursor = "grabbing";
+      }
+
+      // Agregar event listener para iniciar el arrastrar y soltar de la imagen
+      document
+        .getElementById("streetView")
+        .addEventListener("mousedown", dragImage);
+    </script>
+  </body>
+</html>
