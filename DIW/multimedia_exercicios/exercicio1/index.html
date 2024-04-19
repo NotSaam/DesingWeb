@@ -25,49 +25,35 @@
     </style>
   </head>
   <body>
-    <img id="streetView" src="pedravixia.jpg" alt="Google Street View 360º" />
+    <head>
+      <!-- for optimal display on high DPI devices -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script>
-      // Función para habilitar el arrastrar y soltar de la imagen
-      function dragImage(event) {
-        event.preventDefault();
-        // Posición inicial del ratón
-        let initialX = event.clientX;
-        let initialY = event.clientY;
-        // Posición inicial de la imagen
-        let initialImageX = event.target.offsetLeft;
-        let initialImageY = event.target.offsetTop;
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css"
+      />
+    </head>
 
-        // Función para mover la imagen
-        function moveImage(event) {
-          // Calcular la nueva posición de la imagen
-          let newX = initialImageX + event.clientX - initialX;
-          let newY = initialImageY + event.clientY - initialY;
-          // Establecer la nueva posición de la imagen
-          event.target.style.left = newX + "px";
-          event.target.style.top = newY + "px";
+    <!-- the viewer container must have a defined size -->
+    <div id="viewer" style="width: 100vw; height: 100vh"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+          "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.module.js"
         }
-
-        // Función para soltar la imagen
-        function dropImage(event) {
-          // Eliminar los event listeners para mover y soltar la imagen
-          document.removeEventListener("mousemove", moveImage);
-          document.removeEventListener("mouseup", dropImage);
-          // Cambiar el cursor al modo "agarrar"
-          event.target.style.cursor = "grab";
-        }
-
-        // Agregar event listeners para mover y soltar la imagen
-        document.addEventListener("mousemove", moveImage);
-        document.addEventListener("mouseup", dropImage);
-        // Cambiar el cursor al modo "agarrando"
-        event.target.style.cursor = "grabbing";
       }
+    </script>
 
-      // Agregar event listener para iniciar el arrastrar y soltar de la imagen
-      document
-        .getElementById("streetView")
-        .addEventListener("mousedown", dragImage);
+    <script type="module">
+      import { Viewer } from "@photo-sphere-viewer/core";
+
+      const viewer = new Viewer({
+        container: document.querySelector("#viewer"),
+        panorama: "pedravixia.jpg",
+      });
     </script>
   </body>
 </html>
