@@ -3,11 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
-
-
-
 
 
 
@@ -18,6 +14,7 @@ body {
     cursor: url(https://cur.cursors-4u.net/sports/spo-1/spo39.cur), auto
 
 }
+
 .nav-bar {
     width: 100%;
     display: flex;
@@ -28,6 +25,7 @@ body {
     background-color: var(--color2);
     padding: 12px 20px;
 }
+
 .logo img {width: 40px;}
 .menu {display: flex;}
 .menu li {padding-left: 30px;}
@@ -40,6 +38,7 @@ body {
     position: relative;
     text-transform: uppercase;
 }
+
 .menu li a::after {
     content: "";
     position: absolute;
@@ -50,6 +49,7 @@ body {
     background-color: var(--color1);
     transition: 0.15s ease-in-out;
 }
+
 .menu li a:hover:after {width: 100%;}
 .open-menu , .close-menu {
     position: absolute;
@@ -58,15 +58,18 @@ body {
     font-size: 1.5rem;
     display: none;
 }
+
 .open-menu {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
 }
+
 .close-menu {
     top: 20px;
     right: 20px;
 }
+
 #check {display: none;}
 @media(max-width: 610px){
     .menu {
